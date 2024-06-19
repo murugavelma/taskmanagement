@@ -46,6 +46,7 @@ export class LoginComponent {
     if(this.loginForm.valid){
       if(this.authService.login(this.loginForm.value)){
         console.log('Login successful');
+        this.router.navigate(['/dashboard']);
       }
     }
   }
